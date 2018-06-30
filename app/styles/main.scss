@@ -1,0 +1,50 @@
+// bower:scss
+// endbower
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+//// SETTINGS ////
+@import url('https://fonts.googleapis.com/css?family=Domine|Libre+Franklin');
+@import "1_settings/settings.variables";
+
+
+/// GENERIC ///
+@import "3_generic/generic.box-sizing";
+@import "3_generic/generic.normalize";
+
+
+/// BASE ///
+@import "4_base/base.page";
+
+
+/// COMPONENTS ///
+@import "6_components/components.sidebar";
+@import "6_components/components.main";
+@import "6_components/components.logo";
+@import "6_components/components.slider";

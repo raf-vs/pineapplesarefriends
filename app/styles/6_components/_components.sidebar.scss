@@ -1,0 +1,71 @@
+/*
+* @Author: Raf Van Suetendael
+* @Date:   01-07-2018 00:23:20
+* @Last Modified by:   Raf Van Suetendael
+* @Last Modified time: 01-07-2018 01:17:29
+*/
+
+.c-sidebar {
+	position: fixed;
+	z-index: 200;
+	right: -$sidebar-width;
+	background: $white;
+	width: $sidebar-width;
+	height: 100vh;
+	padding: 50px;
+	transition: $global-transition;
+	
+	&.is-active {
+		box-shadow: 0 0 100vw rgba(0,0,0,.8);
+		right: 0;
+	}
+}
+
+.c-sidebar__toggle {
+	position: absolute;
+	right: 41px;
+	top: 41px;
+	overflow: hidden;
+	cursor: pointer;
+	div {
+		transition: $global-transition;
+		float: right;
+		clear: both;
+		background: $white;
+		width: 30px;
+		height: 4px;
+		margin-bottom: 6px;
+		&:first-child {
+			width: 22px;
+		}
+		&:nth-child(3) {
+			position: absolute;
+			top: calc(50% - 2px);
+		}
+		&:last-child {
+			width: 27px;
+			margin-bottom: 0;
+		}
+	}
+	&:hover,&:active,&:focus {
+		div {
+			&:last-child,&:first-child {
+				width: 100%;
+			}
+		}
+	}
+	&.is-active {
+		div {
+			background: $main-black;
+			&:last-child,&:first-child {
+				opacity: 0;
+			}
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
