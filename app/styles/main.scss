@@ -33,6 +33,8 @@
 @import url('https://fonts.googleapis.com/css?family=Domine|Libre+Franklin');
 @import "1_settings/settings.variables";
 
+/// TOOLS ///
+@import "2_tools/tools.include-media";
 
 /// GENERIC ///
 @import "3_generic/generic.box-sizing";
@@ -41,6 +43,7 @@
 
 /// BASE ///
 @import "4_base/base.page";
+@import "4_base/base.typography";
 
 
 /// COMPONENTS ///
@@ -49,3 +52,6 @@
 @import "6_components/components.main";
 @import "6_components/components.logo";
 @import "6_components/components.slider";
+@import "6_components/components.buttons";
+@import "6_components/components.footer";
+

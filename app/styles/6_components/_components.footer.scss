@@ -1,0 +1,54 @@
+/*
+* @Author: Raf Van Suetendael
+* @Date:   01-07-2018 17:23:50
+* @Last Modified by:   Raf Van Suetendael
+* @Last Modified time: 01-07-2018 23:55:42
+*/
+.c-footer {
+	padding: 70px;
+	background: $main-black;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+  	grid-gap: 70px;
+  	position: fixed;
+  	top: 100vh;
+	.c-footer__column {
+		
+	}
+	a {
+		text-decoration: none;
+		color: $main-text;
+	}
+}
+
+.is-slider-end .c-footer {
+	position: relative;
+	top: auto;
+}
+
+.c-footer__nav ul {
+	list-style: none;
+	font-family: $serif-font;
+	font-size: calc(16px + (25 - 16)*(100vw - 300px)/(1200 - 300));
+	color: $main-black;
+	margin: 0;
+	padding: 0;
+	li {
+		// padding-bottom: 1rem;
+		margin-top: 1.5rem;
+		&:last-child {
+			border: none;
+			padding-bottom: 0;
+		}
+	}
+	a {
+		transition: $global-transition;
+		text-decoration: none;
+		color: $white;
+		display: block;
+		&:hover,&:active,&:focus {
+			color: $yellow;
+			padding-left: 1rem;
+		}
+	}
+}

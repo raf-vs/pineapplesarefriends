@@ -1,0 +1,21 @@
+/*
+* @Author: Raf Van Suetendael
+* @Date:   01-07-2018 15:05:39
+* @Last Modified by:   Raf Van Suetendael
+* @Last Modified time: 01-07-2018 23:55:36
+*/
+@for $i from 1 through 6 {
+    h#{7 - $i} {
+    	color: $white;
+    	font-family: $serif-font;
+        font-weight: normal;
+        font-size: calc(24px + (60 - 24)*(100vw - 300px)/(1400 - 300));
+        line-height: 1.5em;
+    }
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

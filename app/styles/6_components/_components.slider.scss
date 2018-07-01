@@ -2,15 +2,16 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 01:27:21
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 14:58:20
+* @Last Modified time: 01-07-2018 23:27:25
 */
 .c-slider {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	&.is-at-end {
-		position: relative;
-	}
+}
+
+.is-slider-end .c-slider {
+	position: relative;
 }
 
 .c-slider__slide {
@@ -20,10 +21,47 @@
 	height: 100vh;
 }
 
+.c-slider__slide-content {
+    top: 50vh;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100vw;
+    padding: 0 10vw;
+}
+
+.c-slider__title {
+	span {
+		position: relative;
+		&:after {
+		    content: "";
+		    display: block;
+		    height: 3px;
+		    background: $yellow;
+		    position: absolute;
+		    width: 5em;
+		    left: 2rem;
+		    margin-top: -.7rem;
+		}
+	}
+	&.c-slider__title--right {
+		padding-left: 30vw;
+	}
+}
+
 .c-slider__arrows {
 	position: absolute;
 	bottom: 30px;
 	left: 25px;
+	> a {
+		margin-top: 6px;
+		display: block !important;
+		transition: $global-transition;
+		max-height: 50px;
+	}
+	.slick-disabled {
+		opacity: 0;
+		max-height:0;
+	}
 }
 
 ul.slick-dots {
@@ -38,28 +76,27 @@ ul.slick-dots {
 		transition: $global-transition;
 		line-height: 46px;
 		text-align: right;
+		&:after {
+			transition: $global-transition;
+			opacity: 0;
+		    transition: all 0.5s ease;
+		    opacity: 0;
+		    content: "";
+		    width: 3px;
+		    margin-right: -10px;
+		    display: block;
+		    background: #EBBA07;
+		    height: 0.8em;
+		    float: right;
+		    margin-top: 8px;
+		}
 		&.slick-active {
 			color: $white;
 			font-size: 1.6rem;
 			&:after {
-				content: "";
-				padding-right: .5rem;
-				border-right: 3px solid $yellow;
+				opacity: 1;
 			}
 			
-		}
-	}
-}
-
-.slick-slide {
-	&:first-child {
-		&:before {
-		content: "";
-		position: absolute;
-		background: rgba(0,0,0,.34);
-		z-index: 20;
-		width: 100%;
-		height: 100%;
 		}
 	}
 }

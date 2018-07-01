@@ -2,7 +2,7 @@
 * @Author: Raf Van Suetendael
 * @Date:   30-06-2018 23:22:53
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 14:44:47
+* @Last Modified time: 01-07-2018 23:48:36
 */
 
 $('img[src$=".svg"]').each(function(){
@@ -40,16 +40,19 @@ $('img[src$=".svg"]').each(function(){
 });
 
 $(document).ready(function() {
-	$('.js-sidebar__toggle').on('click', function() {
+	$('.js-sidebar__toggle, .js-content-overlay').on('click', function() {
 		$('body').toggleClass('no-scroll');
 		$('.js-content-overlay').fadeToggle();
-		$(this).add('.js-sidebar').toggleClass('is-active');
+		$('.js-sidebar__toggle').add('.js-sidebar').toggleClass('is-active');
     });
 
-    $('.js-slider').slick({
+    var $slider = $('.js-slider');
+
+    $slider.slick({
     	infinite: false,
     	dots: true,
     	fade: true,
+    	speed: 1000,
     	prevArrow: $('.js-slider__prev'),
 		nextArrow: $('.js-slider__next'),
 		customPaging: function(slider, i) {
@@ -57,17 +60,28 @@ $(document).ready(function() {
 	    }
     });
 
-    $('.slick-slide').eq(-1).addClass('last-slide');
+    $(document).on('keyup', function(e) {
+        if(e.keyCode == 37 || e.keyCode == 38) {
+            $slider.slick('slickPrev');
+        }
+        if(e.keyCode == 39 || e.keyCode == 40) {
+            $slider.slick('slickNext');
+        }
+    });
 
-    $('.js-slider').on('wheel', (function(e) {
-	  if (e.originalEvent.deltaY > 0 && !$('.slick-slide').eq(-1).hasClass('slick-active')) {
-	    $(this).slick('slickNext');
-	    $(this).parent().removeClass('is-at-end');
-	  } else if (e.originalEvent.deltaY < 0) {
-	    $(this).slick('slickPrev');
-	    $(this).parent().removeClass('is-at-end');
-	  } else if ($('.slick-slide').eq(-1).hasClass('slick-active')) {
-		$(this).parent().addClass('is-at-end');
-	  }
+    if ($('.slick-slide').eq(-1).hasClass('slick-active')) {
+		$('body').addClass('is-slider-end');
+	}
+
+    $slider.on('wheel', (function(e) {
+		if (e.originalEvent.deltaY > 0 && !$('.slick-slide').eq(-1).hasClass('slick-active')) {
+	    	$(this).slick('slickNext');
+	    	$('body').removeClass('is-slider-end');
+	  	} else if (e.originalEvent.deltaY < 0) {
+	    	$(this).slick('slickPrev');
+	    	$('body').removeClass('is-slider-end');
+	  	} else if ($('.slick-slide').eq(-1).hasClass('slick-active')) {
+			$('body').addClass('is-slider-end');
+	  	}
 	}));
 });

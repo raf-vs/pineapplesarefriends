@@ -2,10 +2,16 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 01:07:08
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 14:36:44
+* @Last Modified time: 01-07-2018 21:47:42
 */
 .c-main {
 	width: 100vw;
 	height: 100vh;
-	// overflow: hidden;
+	overflow: hidden;
+	position: fixed;
+	transition: $global-transition;
+}
+
+.is-slider-end .c-main {
+	position: relative;
 }
