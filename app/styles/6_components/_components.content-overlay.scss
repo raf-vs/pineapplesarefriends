@@ -1,0 +1,17 @@
+/*
+* @Author: Raf Van Suetendael
+* @Date:   01-07-2018 13:54:57
+* @Last Modified by:   Raf Van Suetendael
+* @Last Modified time: 01-07-2018 14:02:34
+*/
+.c-content-overlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 150;
+    height: 100vh;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 60%);
+}

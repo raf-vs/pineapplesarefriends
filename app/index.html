@@ -2,9 +2,16 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="The world needs to know just how great pineapples are! Pineapples are friends, not food.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ananas - Pineapples are friends</title>
+
+    <meta property="og:title" content="Ananas - Pineapples are friends">
+    <meta property="og:description" content="The world needs to know just how great pineapples are! Pineapples are friends, not food.">
+    <meta property="og:image" content="/images/social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -35,9 +42,11 @@
 
   </head>
   <body>
+    
+    <div class="c-content-overlay js-content-overlay"></div>
 
     <aside class="c-sidebar js-sidebar">
-      <div class="c-sidebar__toggle is-active js-sidebar__toggle">
+      <div class="c-sidebar__toggle js-sidebar__toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -68,15 +77,29 @@
       <div class="c-logo">
         <img class="c-logo__img" src="/images/logo.svg" alt="Ananas logo">
       </div>
-      <div class="c-slider js-slider">
-        <div class="section c-slider__slide" style="background-image: url('/images/slides/1.jpg')">
-          <img src="" alt="">
+      <div class="c-slider">
+        <div class="js-slider">
+          <section class="c-slider__slide" style="background-image: url('/images/slides/1.jpg')">
+            <div class="c-slider__slide-content">
+              <h1>Niet uw <span>typische</span> ananas!</h1>
+            </div>
+            
+          </section>
+          <section class="c-slider__slide" style="background-image: url('/images/slides/2.jpg')">
+            <div class="c-slider__slide-content">
+              <h1>Pineapples are friends, not food</h1>
+            </div>
+          </section>
+          <section class="c-slider__slide" style="background-image: url('/images/slides/3.jpg')">
+            <div class="c-slider__slide-content">
+              
+            </div>
+          </section>
         </div>
-        <div class="section c-slider__slide" style="background-image: url('/images/slides/2.jpg')">
-          <img src="" alt="">
-        </div>
-        <div class="section c-slider__slide" style="background-image: url('/images/slides/3.jpg')">
-          <img src="" alt="">
+        <div class="c-slider__arrows">
+          <a href="#" class="js-slider__prev"><img src="/images/icon-up.svg" alt="Previous slide"></a>
+          <br>
+          <a href="#" class="js-slider__next"><img src="/images/icon-down.svg" alt="Next slide"></a>
         </div>
       </div>
     </main>
@@ -90,15 +113,14 @@
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    
-    <!-- endbower --><script src="scripts/vendor/fullpage.js"></script>
+    <!-- endbower -->
     <!-- endbuild -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
