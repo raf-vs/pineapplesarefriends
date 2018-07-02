@@ -2,15 +2,33 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 15:05:39
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 23:55:36
+* @Last Modified time: 02-07-2018 23:46:53
 */
 @for $i from 1 through 6 {
     h#{7 - $i} {
     	color: $white;
     	font-family: $serif-font;
         font-weight: normal;
-        font-size: calc(24px + (60 - 24)*(100vw - 300px)/(1400 - 300));
         line-height: 1.5em;
+        margin-top: 0;
+    }
+}
+
+h1 {
+    font-size: calc(24px + (60 - 24)*(100vw - 300px)/(1400 - 300));
+}
+
+h3 {
+    font-size: calc(18px + (25 - 18)*(100vw - 300px)/(1400 - 300));
+}
+
+a {
+    text-decoration: none;
+    color: $main-text;
+    transition: $global-transition;
+    &:hover,&:active,&:focus {
+        color: $yellow;
+        padding-left: 1rem;
     }
 }
 
@@ -18,4 +36,8 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+address {
+    font-style: normal;
 }

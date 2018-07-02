@@ -2,22 +2,77 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 17:23:50
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 23:55:42
+* @Last Modified time: 02-07-2018 23:11:45
 */
 .c-footer {
-	padding: 70px;
-	background: $main-black;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-  	grid-gap: 70px;
-  	position: fixed;
+	position: fixed;
   	top: 100vh;
-	.c-footer__column {
-		
+	padding: calc(30px + (70 - 30)*(100vw - 400px)/(1400 - 400));
+	padding-bottom: 2rem;
+	background: $main-black;
+	.c-footer__columns {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: calc(30px + (70 - 30)*(100vw - 400px)/(1400 - 400));
+		line-height: 1.6rem;
+		border-bottom: 1px solid $main-text;
+		padding-bottom: calc(30px + (70 - 30)*(100vw - 400px)/(1400 - 400));
+		margin-bottom: 2rem;
+		@include media("<desktop") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=phone") {
+			grid-template-columns: 1fr;
+		}
 	}
+
+	.c-footer__sub {
+		display: grid;
+	    grid-template-columns: repeat(8, 1fr);
+	    grid-gap: 2rem;
+	    align-items: center;
+	    @include media("<desktop") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=phone") {
+			grid-template-columns: 1fr;
+		}
+	    .c-footer__social {
+	    	grid-column: end;
+	    	text-align: right;
+	    	@include media("<=phone") {
+	    		grid-column: 1;
+	    		text-align: left;
+	    	}
+	    	a {
+	    		margin: 0 .8rem;
+	    		&:hover,&:active,&:focus {
+	    			padding: 0;
+	    		}
+	    	}
+	    }
+	}
+  	
 	a {
 		text-decoration: none;
 		color: $main-text;
+		transition: $global-transition;
+		&:hover,&:active,&:focus {
+			color: $yellow;
+			padding-left: 1rem;
+		}
+	}
+	ul {
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+	img {
+		display: block;
+		margin-top: -1.6rem;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -29,13 +84,16 @@
 .c-footer__nav ul {
 	list-style: none;
 	font-family: $serif-font;
-	font-size: calc(16px + (25 - 16)*(100vw - 300px)/(1200 - 300));
+	font-size: calc(14px + (25 - 14)*(100vw - 300px)/(1400 - 300));
 	color: $main-black;
 	margin: 0;
 	padding: 0;
 	li {
 		// padding-bottom: 1rem;
 		margin-top: 1.5rem;
+		&:first-child {
+			margin-top: 0;
+		}
 		&:last-child {
 			border: none;
 			padding-bottom: 0;

@@ -64,25 +64,42 @@
             <a href="#" title="Jobs">Jobs</a>
           </li>
           <li class="c-sidebar__nav-item">
-            <a href="#" title="Cases">Cases</a>
+            <a href="#" title="Cases">Cases<span>3</span></a>
           </li>
           <li class="c-sidebar__nav-item">
             <a href="#" title="Contact">Contact</a>
           </li>
         </ul>
       </nav>
+      <div class="c-sidebar__social">
+        <a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="c-sidebar__info">
+        <div class="c-sidebar__info-item">
+          <p><i class="fas fa-map-marker-alt"></i> Ananas Campus 7,  Pineapple Steenweg 42 / B - 3730 Anasselt</p>
+        </div>
+        <div class="c-sidebar__info-item">
+          <p><a href="mailto:info@ananas.com"><i class="fas fa-envelope"></i> info@ananas.com</a></p>
+        </div>
+        <div class="c-sidebar__info-item">
+          <p><a href="tel:+3223456478"><i class="fas fa-phone"></i> +32 23 456 478</a></p>
+        </div>
+      </div>
     </aside>
 
     <main class="c-main">
       <div class="c-logo">
         <img class="c-logo__img" src="/images/logo.svg" alt="Ananas logo">
       </div>
-      <div class="c-slider">
+      <div id="slider" class="c-slider">
         <div class="js-slider">
           <section class="c-slider__slide" style="background-image: url('/images/slides/1.jpg')">
             <div class="c-slider__slide-content">
               <h1 class="c-slider__title">Niet uw <span>typische</span><br>ananas!</h1>
               <a href="#" class="c-btn">Aanpak</a>
+              <div class="c-slider__awards">
+                <img src="/images/award-cia.svg" alt="Customer Intimacy Award"><img src="/images/award-epa.svg" alt="Exact pineapple Accountant">
+              </div>
             </div>
           </section>
           <section class="c-slider__slide" style="background-image: url('/images/slides/2.jpg')">
@@ -105,51 +122,76 @@
     </main>
 
     <footer class="c-footer">
-      <div class="c-footer__column">
-        <nav class="c-footer__nav">
+      <div class="c-footer__columns">
+        <div class="c-footer__column">
+          <nav class="c-footer__nav">
+            <ul>
+              <li class="c-footer__nav-item">
+                <a href="#" title="Schil">Schil</a>
+              </li>
+              <li class="c-footer__nav-item">
+                <a href="#" title="Gerechten">Gerechten</a>
+              </li>
+              <li class="c-footer__nav-item">
+                <a href="#" title="Jobs">Jobs</a>
+              </li>
+              <li class="c-footer__nav-item">
+                <a href="#" title="Cases">Cases</a>
+              </li>
+              <li class="c-footer__nav-item">
+                <a href="#" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="c-footer__column">
           <ul>
-            <li class="c-footer__nav-item">
-              <a href="#" title="Schil">Schil</a>
+            <li>
+              <a href="#">Werken bij Ananas</a>
             </li>
-            <li class="c-footer__nav-item">
-              <a href="#" title="Gerechten">Gerechten</a>
+            <li>
+              <a href="#">Vacatures</a>
             </li>
-            <li class="c-footer__nav-item">
-              <a href="#" title="Jobs">Jobs</a>
+            <li>
+              <a href="#">Spontaan komen eten</a>
             </li>
-            <li class="c-footer__nav-item">
-              <a href="#" title="Cases">Cases</a>
+            <li>
+              <a href="#">Onze diensten</a>
             </li>
-            <li class="c-footer__nav-item">
-              <a href="#" title="Contact">Contact</a>
+            <li>
+              <a href="#">5 redenen om te ananassen</a>
             </li>
           </ul>
-        </nav>
+        </div>
+        <div class="c-footer__column">
+          <h3>Contactgegevens</h3>
+          <address>
+            <p>
+              Ananas Campus 7,<br>
+              Pineapple Steenweg 42 / B<br>
+              3730 Anasselt
+            </p>
+            
+            <p>+32 23 456 478</p>
+            
+            <p>
+              <a href="mailto:info@ananas.com">info@ananas.com</a>
+            </p>
+          </address>
+        </div>
+        <div class="c-footer__column">
+          <img src="/images/footer_pineapple-sliced.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><a href="#">Meer info & voorwaarden</a></p>
+        </div>
       </div>
-      <div class="c-footer__column">
-        <ul>
-          <li>
-            <a href="#">Werken bij Ananas</a>
-          </li>
-          <li>
-            <a href="#">Vacatures</a>
-          </li>
-          <li>
-            <a href="#">Spontaan komen eten</a>
-          </li>
-          <li>
-            <a href="#">Onze diensten</a>
-          </li>
-          <li>
-            <a href="#">5 redenen om te ananassen</a>
-          </li>
-        </ul>
-      </div>
-      <div class="c-footer__column">
-        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiata.
-      </div>
-      <div class="c-footer__column">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      <div class="c-footer__sub">
+        <img src="/images/footer_pineapple.svg" alt="">
+        <a href="#">Disclaimer</a> <a href="#">Privacy policy</a> <a href="#">Cookie policy</a>
+        <div class="c-footer__social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
     </footer>
 
@@ -158,6 +200,12 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
+    <script defer src="/scripts/vendor/fontawesome/brands.js"></script>
+    <script defer src="/scripts/vendor/fontawesome/regular.js"></script>
+    <script defer src="/scripts/vendor/fontawesome/solid.js"></script>
+    <script defer src="/scripts/vendor/fontawesome/fontawesome.js"></script>
+    <script type="text/javascript" src="/scripts/vendor/hammer.js"></script>
+    <script type="text/javascript" src="/scripts/vendor/retina.js"></script>
     <!-- endbuild -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>

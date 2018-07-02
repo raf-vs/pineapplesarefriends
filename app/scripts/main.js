@@ -2,7 +2,7 @@
 * @Author: Raf Van Suetendael
 * @Date:   30-06-2018 23:22:53
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 23:48:36
+* @Last Modified time: 03-07-2018 00:35:26
 */
 
 $('img[src$=".svg"]').each(function(){
@@ -84,4 +84,44 @@ $(document).ready(function() {
 			$('body').addClass('is-slider-end');
 	  	}
 	}));
+
+    var element = document.getElementById("slider"); 
+    var mc = new Hammer(element);
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+    mc.on("swipeleft", function (e) { 
+        if (!$('.slick-slide').eq(-1).hasClass('slick-active')) {
+            $('.js-slider').slick('slickNext');
+            $('body').removeClass('is-slider-end');
+        } else {
+            $('body').addClass('is-slider-end');
+        }
+    }); 
+
+    mc.on("swiperight", function (e) { 
+        if (!$('.slick-slide').eq(-1).hasClass('slick-active')) {
+            $('.js-slider').slick('slickPrev');
+            $('body').removeClass('is-slider-end');
+        } else {
+            $('body').addClass('is-slider-end');
+        }
+    });
+
+    mc.on("swipeup", function (e) { 
+        if (!$('.slick-slide').eq(-1).hasClass('slick-active')) {
+            $('.js-slider').slick('slickNext');
+            $('body').removeClass('is-slider-end');
+        } else {
+            $('body').addClass('is-slider-end');
+        }
+    }); 
+
+    mc.on("swipedown", function () { 
+        if (!$('.slick-slide').eq(-1).hasClass('slick-active')) {
+            $('.js-slider').slick('slickPrev');
+            $('body').removeClass('is-slider-end');
+        } else {
+            $('body').addClass('is-slider-end');
+        }
+    });
 });

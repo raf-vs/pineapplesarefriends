@@ -2,7 +2,7 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 00:23:20
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 23:46:52
+* @Last Modified time: 03-07-2018 00:37:44
 */
 
 .c-sidebar {
@@ -14,10 +14,17 @@
 	height: 100vh;
 	padding: 50px;
 	transition: $global-transition;
+	overflow: auto;
+	max-height: 100vh;
 	
 	@include media("<=tablet") {
 		width: $sidebar-width * 2;
 		right: -$sidebar-width * 2;
+	}
+
+	@include media("<=phone") {
+		width: calc(100vw - 20px);
+		right: -100vw;
 	}
 	
 	&.is-active {
@@ -83,14 +90,14 @@
 .c-sidebar__nav ul {
 	list-style: none;
 	font-family: $serif-font;
-	font-size: calc(20px + (35 - 20)*(100vw - 300px)/(1200 - 300));
+	font-size: calc(20px + (40 - 20)*(100vw - 300px)/(1400 - 300));
 	color: $main-black;
 	margin: 0;
 	padding: 0;
 	li {
 		border-bottom: 1px solid #979797;
-		padding-bottom: 1rem;
-		margin-top: 1.5rem;
+		padding-bottom: 1.6rem;
+		margin-top: 2rem;
 		&:last-child {
 			border: none;
 			padding-bottom: 0;
@@ -99,11 +106,74 @@
 	a {
 		transition: $global-transition;
 		text-decoration: none;
-		color: $main-black;
+		color: #231322;
 		display: block;
 		&:hover,&:active,&:focus {
 			color: $yellow;
 			padding-left: 1rem;
 		}
+	}
+}
+.c-sidebar__nav-item {
+	span {
+		background: #EBBA07;
+	    color: #fff;
+	    border-radius: 50%;
+	    width: 1.8em;
+	    height: 1.8em;
+	    font-size: 0.8rem;
+	    display: inline-block;
+	    text-align: center;
+	    line-height: 1.8em;
+	    margin-top: -.8em;
+	    position: absolute;
+	    margin-left: 2em;
+	}
+}
+
+.c-sidebar__social {
+	margin-top: 5rem;
+	a {
+		transition: $global-transition;
+		color: #231322;
+		font-size: 2em;
+		margin-right: 1em;
+		&:hover,&:active,&:focus {
+			color: $yellow;
+			padding: 0;
+		}
+	}
+}
+
+.c-sidebar__info {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 20px;
+	align-items: center;
+	bottom: 50px;
+	position: absolute;
+	width: calc(90% - 50px);
+	color: #231322;
+	.c-sidebar__info-item {
+		text-align: center;
+		padding: .5em;
+		border: 1px solid $main-text;
+		.svg-inline--fa {
+			color: $yellow;
+			margin-right: .8em;
+		}
+		a {
+			color: #231322;
+			&:hover,&:active,&:focus {
+				color: $yellow;
+				padding: 0;
+			}
+		}
+	}
+	:first-child {
+		grid-column: 1 / 3;
+	}
+	@include media("<=tablet") {
+		display: none;
 	}
 }

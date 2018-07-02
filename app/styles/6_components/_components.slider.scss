@@ -2,7 +2,7 @@
 * @Author: Raf Van Suetendael
 * @Date:   01-07-2018 01:27:21
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 23:27:25
+* @Last Modified time: 03-07-2018 00:52:21
 */
 .c-slider {
 	width: 100vw;
@@ -45,6 +45,24 @@
 	}
 	&.c-slider__title--right {
 		padding-left: 30vw;
+	}
+}
+
+.c-slider__awards {
+	position: absolute;
+	right: 10vw;
+	top: 4vh;
+	> svg:last-child {
+		margin-left: 40px;
+	}
+	@include media("<desktop") {
+		position: relative;
+		right: auto;
+	}
+	@include media("<=phone") {
+		> svg:last-child {
+			margin-left: 0px;
+		}
 	}
 }
 

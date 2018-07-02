@@ -2,12 +2,13 @@
 * @Author: Raf Van Suetendael
 * @Date:   30-06-2018 23:48:47
 * @Last Modified by:   Raf Van Suetendael
-* @Last Modified time: 01-07-2018 14:05:27
+* @Last Modified time: 02-07-2018 21:24:48
 */
 body {
   background: $main-black;
   font-family: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $main-text;
+  line-height: 1.5rem;
   &.no-scroll {
   	overflow: hidden !important;
   }
